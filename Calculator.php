@@ -4,7 +4,7 @@
 
 // Define to make this all one document
 $page = $_GET['page'];
-
+//teste
 // Defining the "calc" class
 class calc 
 {
