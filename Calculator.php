@@ -20,7 +20,6 @@ class calc
     {
       $result = $number1 -  $number2;
       echo $result;
-      return ($result)
     }
 
     function divide($number1,$number2)
