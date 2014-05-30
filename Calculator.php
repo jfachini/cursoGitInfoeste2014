@@ -17,6 +17,9 @@ class calc
 
     function subtract($number1,$number2)
     {
+      $result = $number1 -  $number2;
+      echo $result;
+      return ($result)
     }
 
     function divide($number1,$number2)
@@ -29,14 +32,25 @@ class calc
 }
 $calc = new calc();
 ?>
-
+<html>
+<head>
 <TITLE>PHP Calculator v1</TITLE>
+<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
 <form name="calc" action="?page=calc" method="POST">
 Number 1: <input type=text name=value1><br>
 Number 2: <input type=text name=value2><br>
 Operation: <input type=radio name=oper value="add">Addition <input type=radio name=oper value="subtract">Subtraction <input type=radio name=oper value="divide">Division <input type=radio name=oper value="multiply">Multiplication</input><br>
 <input type=submit value="Calculate">
 </form>
+
+<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-1.10.2.min.js"></script>
+
+</body>
+</html>
 <?php
 if($page == "calc"){
 $number1 = $_POST['value1'];
