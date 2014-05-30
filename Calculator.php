@@ -1,4 +1,4 @@
-<?php
+?php
 // Calculator Script v1
 // Copyright (C) 2007 RageD
 
@@ -21,6 +21,7 @@ class calc
 
     function divide($number1,$number2)
     {
+    	return $number1/$number2;
     }
 
     function multiply($number1,$number2)
