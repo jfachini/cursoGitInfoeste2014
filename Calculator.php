@@ -24,7 +24,8 @@ class calc
     }
 
     function multiply($number1,$number2)
-    {                   
+    {
+	echo $number1*$number2;                   
     }
 }
 $calc = new calc();
