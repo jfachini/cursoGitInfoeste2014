@@ -24,6 +24,7 @@ class calc
 
     function divide($number1,$number2)
     {
+	    echo "4";
     }
 
     function multiply($number1,$number2)
