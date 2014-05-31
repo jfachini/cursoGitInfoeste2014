@@ -30,7 +30,7 @@ class calc
 
     function multiply($number1,$number2,$number3)
     {
-        echo "hiho";
+	echo $number1*$number2*$number3;
     }
 }
 $calc = new calc();
