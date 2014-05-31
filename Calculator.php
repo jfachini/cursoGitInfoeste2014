@@ -19,7 +19,7 @@ class calc
 
     function subtract($number1,$number2,$number3)
     {
-      $result = $number1 -  $number2;
+      $result = $number1 -  $number2 - $number3;
       echo $result;
     }
 
