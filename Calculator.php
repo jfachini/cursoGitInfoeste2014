@@ -19,8 +19,7 @@ class calc
 
     function subtract($number1,$number2,$number3)
     {
-      $result = $number1 -  $number2;
-      echo $result;
+       return null;
     }
 
     function divide($number1,$number2,$number3)
@@ -30,7 +29,7 @@ class calc
 
     function multiply($number1,$number2,$number3)
     {
-	echo $number1*$number2;                   
+        echo "hiho";
     }
 }
 $calc = new calc();
