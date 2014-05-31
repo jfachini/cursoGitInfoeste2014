@@ -14,7 +14,7 @@ class calc
 
     function add($number1,$number2,$number3)
     {
-		echo $number1 + $number2;
+		echo $number1 + $number2 + $number3;
     }
 
     function subtract($number1,$number2,$number3)
