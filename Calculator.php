@@ -10,6 +10,7 @@ class calc
 {
     var $number1;
     var $number2;
+	var $number3;
 
     function add($number1,$number2,$number3)
     {
@@ -58,6 +59,7 @@ Operation: <input type=radio name=oper value="add">Addition <input type=radio na
 if($page == "calc"){
 $number1 = $_POST['value1'];
 $number2 = $_POST['value2'];
+$number3 = $_POST['value3'];
 $oper = $_POST['oper'];
      if(!$number1){
           echo("You must enter number 1!");
@@ -84,7 +86,7 @@ $oper = $_POST['oper'];
           echo("Number 2 MUST be numbers!");
           exit;
      }
-	 if(!eregi("[0-9]", $number2)){
+	 if(!eregi("[0-9]", $number3)){
           echo("Number 3 MUST be numbers!");
           exit;
      }
