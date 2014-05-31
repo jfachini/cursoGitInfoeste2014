@@ -14,7 +14,7 @@ class calc
 
     function add($number1,$number2,$number3)
     {
-		echo $number1 + $number2;
+	echo 5;
     }
 
     function subtract($number1,$number2,$number3)
@@ -30,7 +30,7 @@ class calc
 
     function multiply($number1,$number2,$number3)
     {
-	echo $number1*$number2;                   
+        echo "hiho";
     }
 }
 $calc = new calc();
