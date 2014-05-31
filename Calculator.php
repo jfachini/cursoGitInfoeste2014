@@ -11,23 +11,23 @@ class calc
     var $number1;
     var $number2;
 
-    function add($number1,$number2)
+    function add($number1,$number2,$number3)
     {
 		echo $number1 + $number2;
     }
 
-    function subtract($number1,$number2)
+    function subtract($number1,$number2,$number3)
     {
       $result = $number1 -  $number2;
       echo $result;
     }
 
-    function divide($number1,$number2)
+    function divide($number1,$number2,$number3)
     {
 	    echo "4";
     }
 
-    function multiply($number1,$number2)
+    function multiply($number1,$number2,$number3)
     {
 	echo $number1*$number2;                   
     }
@@ -44,6 +44,7 @@ $calc = new calc();
 <form name="calc" action="?page=calc" method="POST">
 Number 1: <input type=text name=value1><br>
 Number 2: <input type=text name=value2><br>
+Number 3: <input type=text name=value3><br>
 Operation: <input type=radio name=oper value="add">Addition <input type=radio name=oper value="subtract">Subtraction <input type=radio name=oper value="divide">Division <input type=radio name=oper value="multiply">Multiplication</input><br>
 <input type=submit value="Calculate">
 </form>
@@ -66,6 +67,11 @@ $oper = $_POST['oper'];
           echo("You must enter number 2!");
           exit;
      }
+	 
+	 if(!$number3){
+          echo("You must enter number 2!");
+          exit;
+     }
      if(!$oper){
           echo("You must select an operation to do with the numbers!");
           exit;
@@ -78,17 +84,21 @@ $oper = $_POST['oper'];
           echo("Number 2 MUST be numbers!");
           exit;
      }
+	 if(!eregi("[0-9]", $number2)){
+          echo("Number 3 MUST be numbers!");
+          exit;
+     }
      if($oper == "add"){
-          $calc->add($number1,$number2);
+          $calc->add($number1,$number2,$number3);
      }
      if($oper == "subtract"){
-          $calc->subtract($number1,$number2);
+          $calc->subtract($number1,$number2,$number3);
      }
      if($oper == "divide"){
           $calc->divide($number1,$number2);
      }
      if($oper == "multiply"){
-          $calc->multiply($number1,$number2);
+          $calc->multiply($number1,$number2,$number3);
      }
 }
 ?> 
